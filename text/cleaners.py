@@ -109,7 +109,7 @@ def english_cleaners2(text):
     phonemes = collapse_whitespace(phonemes)
     return phonemes
   
-  def japanese_cleaners(text):
+def japanese_cleaners(text):
     """Pipeline for English text, including abbreviation expansion. + punctuation + stress"""
     text = convert_to_ascii(text)
     text = lowercase(text)
