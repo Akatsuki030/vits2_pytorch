@@ -110,10 +110,6 @@ def english_cleaners2(text):
     return phonemes
   
 def japanese_cleaners(text):
-    """Pipeline for English text, including abbreviation expansion. + punctuation + stress"""
-    text = convert_to_ascii(text)
-    text = lowercase(text)
-    text = expand_abbreviations(text)
     phonemes = phonemize(
         text,
         language="ja",
