@@ -110,13 +110,7 @@ def english_cleaners2(text):
     return phonemes
   
 def japanese_cleaners(text):
-    phonemes = phonemize(
-        text,
-        language="ja",
-        backend="espeak",
-        strip=True,
-        preserve_punctuation=True,
-        with_stress=True,
-    )
-    phonemes = collapse_whitespace(phonemes)
-    return phonemes
+    text = convert_to_ascii(text)
+    text = lowercase(text)
+    text = collapse_whitespace(text)
+    return text
