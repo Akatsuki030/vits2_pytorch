@@ -29,8 +29,6 @@ from losses import generator_loss, discriminator_loss, feature_loss, kl_loss
 from mel_processing import mel_spectrogram_torch, spec_to_mel_torch
 from text.symbols import symbols
 
-hps.model_dir = "/content/drive/MyDrive"
-
 torch.backends.cudnn.benchmark = True
 global_step = 0
 
@@ -53,6 +51,7 @@ def main():
         ),
     )
 
+hps.model_dir = "/content/drive/MyDrive"
 
 def run(rank, n_gpus, hps):
     global global_step
