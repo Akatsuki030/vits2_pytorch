@@ -32,6 +32,7 @@ from text.symbols import symbols
 torch.backends.cudnn.benchmark = True
 global_step = 0
 
+model_dir = "/content/drive/MyDrive"
 
 def main():
     """Assume Single Node Multi GPUs Training Only"""
@@ -50,8 +51,6 @@ def main():
             hps,
         ),
     )
-
-hps.model_dir = "/content/drive/MyDrive"
 
 def run(rank, n_gpus, hps):
     global global_step
