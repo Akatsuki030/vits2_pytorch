@@ -16,6 +16,7 @@ logger = logging
 
 
 def load_checkpoint(checkpoint_path, model, optimizer=None):
+    checkpoint_path = '/content/drive/MyDrive' #A Try
     assert os.path.isfile(checkpoint_path)
     checkpoint_dict = torch.load(checkpoint_path, map_location="cpu")
     iteration = checkpoint_dict["iteration"]
@@ -45,6 +46,7 @@ def load_checkpoint(checkpoint_path, model, optimizer=None):
 
 
 def save_checkpoint(model, optimizer, learning_rate, iteration, checkpoint_path):
+    checkpoint_path = '/content/drive/MyDrive' #A Try
     logger.info(
         "Saving model and optimizer state at iteration {} to {}".format(
             iteration, checkpoint_path
